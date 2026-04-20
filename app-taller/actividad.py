@@ -54,3 +54,18 @@ moto1 = Moto("XYZ789", "Honda", 150)
 auto1.mostrar_info()
 print("-----")
 moto1.mostrar_info()
+
+#Mecanico
+class Mecanico:
+    def __init__(self, nombre, especialidad, turno):
+        self.nombre = nombre
+        self.especialidad = especialidad
+        self.turno = turno
+        
+
+#Reparacion
+
+class Reparacion:
+    def __init__(self, descripcion, precio, duracion, estado)
+
+
