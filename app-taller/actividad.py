@@ -9,14 +9,12 @@ class Cliente:
         print(f"{self.nombre} {self.apellido} solicitó un turno")
 
     def recibir_diagnostico(self, diagnostico):
-        print(f"{self.nombre} fue informado: {diagnostico}")
+        mensaje = f"Cliente {self.nombre} {self.apellido} recibió el diagnóstico: {diagnostico}"
+        print(mensaje)
+        return mensaje
 
 
-# Crear cliente (ahora sí con todos los datos)
-cliente1 = Cliente("Priscila", "Toledano", "2991234567", "priscila@gmail.com")
-cliente1.recibir_diagnostico("El auto tiene fallos en los frenos")
-
-
+# Se dejan dos líneas vacías entre clases
 class Vehiculo:
     def __init__(self, patente, marca):
         self.patente = patente
@@ -40,17 +38,21 @@ class Moto(Vehiculo):
     def __init__(self, patente, marca, cilindrada):
         super().__init__(patente, marca)
         self.cilindrada = cilindrada
-
+        
     def mostrar_info(self):
         super().mostrar_info()
         print(f"Cilindrada: {self.cilindrada}")
 
 
-# Crear objetos
-auto1 = Auto("ABC123", "Toyota", 4)
-moto1 = Moto("XYZ789", "Honda", 150)
+# Bloque de ejecución (al final)
+print("--- DATOS DEL CLIENTE ---")
+cliente1 = Cliente("Priscila", "Toledano", "2991234567", "priscila@gmail.com")
+cliente1.recibir_diagnostico("El auto tiene fallos en los frenos")
 
-# Mostrar info
+print("\n--- DATOS DE LOS VEHÍCULOS ---")
+auto1 = Auto("ABC123", "Toyota", 4)
+moto1 = Moto("XYZ789", "Honda", "150cc")
 auto1.mostrar_info()
 print("-----")
 moto1.mostrar_info()
+
